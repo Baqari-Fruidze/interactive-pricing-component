@@ -14,6 +14,16 @@ body {
   background-repeat: no-repeat;
   background-position: center top 6rem, top left 0rem;
 }
+.twenty-five-percent-desk {
+  border-radius: 9.5px;
+  background: #feede8;
+  display: none;
+  color: #ff8d68;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: normal;
+}
 .money {
   display: none;
   color: #293356;
@@ -171,4 +181,90 @@ svg:hover {
   font-style: normal;
   font-weight: 800;
   line-height: normal;
+}
+@media (min-width: 90rem) {
+  body {
+    padding: 10.4rem 45rem 13.7rem 45rem;
+  }
+  .twenty-five-percent-desk {
+    display: block;
+    width: 25%;
+  }
+  .discount-small-span {
+    display: none;
+  }
+  .main-container {
+    padding: 4rem 4.4rem 3.3rem 4.6rem;
+  }
+  h1 {
+    color: #293356;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: normal;
+  }
+  header {
+    gap: 1.2rem;
+    margin-bottom: 9.2rem;
+  }
+  .header-parag {
+    width: 40ch;
+    color: #848ead;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .slider-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5.7rem;
+  }
+  .view {
+    color: #848ead;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+  .money {
+    color: #293356;
+    text-align: right;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+  }
+  .month {
+    color: #848ead;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .slider {
+    width: 100%;
+    order: 3;
+  }
+  .hundredK {
+    order: 1;
+  }
+  .sixteen {
+    order: 2;
+  }
+  .billing-container {
+    margin-left: 10rem;
+    margin-bottom: 4.5rem;
+  }
+  .bottom-main-con {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .bottom-btn {
+    width: 38%;
+  }
+  .check {
+    justify-content: flex-start;
+  }
 }
