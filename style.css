@@ -83,15 +83,75 @@ h1 {
 .hundredK {
   display: block;
 }
+/* .slider-icon {
+  position: absolute;
+  top: 29.5rem;
+  left: calc(50% - 7rem);
+  transition: left 0.2s;
+} */
 .slider {
-  width: 85%;
+  width: 100%;
+  -webkit-appearance: none;
+  height: 13px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+/* .slider::-webkit-slider-thumb {
   background-image: url(./images/icon-slider.svg);
-  background-size: 200%;
-  background-color: #ff8d68;
-  background: #ff8d68;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #a4f3eb;
+  cursor: pointer;
+} */
+/* .slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4caf50;
+  cursor: pointer;
+} */
+.slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 13px;
+  border-radius: 5px;
+  background: linear-gradient(
+    to right,
+    #a4f3eb 0%,
+    #a4f3eb 50%,
+    #d3d3d3 50%,
+    #d3d3d3 100%
+  );
+}
+.slider::-webkit-slider-thumb {
+  background-image: url(./images/icon-slider.svg) !important;
+  background-repeat: no-repeat !important;
+  background-position: center left 1rem !important;
+  border-radius: 40px;
+  background: #10d8c4;
+  box-shadow: 0px 15px 30px 0px rgba(0, 255, 231, 0.6);
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-top: -14px;
 }
 .sixteen {
-  display: block;
+  display: inline;
+}
+.lateChange {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 .month {
   margin-left: 1rem;
@@ -111,7 +171,7 @@ h1 {
 svg {
   color: #cfd8ef;
 }
-svg:hover {
+svg:active {
   color: #7aeadf;
 }
 .line {
