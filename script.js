@@ -3,10 +3,13 @@
 // - 100K pageviews / $16 per month
 // - 500k pageviews / $24 per month
 // - 1M pageviews / $36 per month
+const checker = document.querySelector(".switch");
 const slider = document.querySelector(".slider");
 
 const pageviewSpan = document.querySelector(".hundredK");
 const moneyPermonth = document.querySelector(".sixteen");
+const monthSpan = document.querySelector(".month");
+let checkBox = document.querySelector(".checkbox");
 
 let arr = [
   {
@@ -45,12 +48,18 @@ let arr = [
     on: { amount: "$324.00" },
   },
 ];
-
-slider.addEventListener("input", () => {
-  for (let i = 0; i <= 5; i++) {
-    if (slider.value === "0") {
-      pageviewSpan.textContent = viewArr[i];
-    }
+let inputValue;
+slider.addEventListener("input", (event) => {
+  inputValue = Number(event.target.value);
+  moneyPermonth.textContent = arr[inputValue].off.amount;
+  pageviewSpan.textContent = arr[inputValue].view;
+  let checked = checkBox.checked;
+});
+checkBox.addEventListener("change", () => {
+  let checked = checkBox.checked;
+  if (checked) {
+    moneyPermonth.textContent = arr[inputValue].on.amount;
+    monthSpan.textContent = "/ year";
   }
 });
 
