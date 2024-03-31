@@ -48,7 +48,7 @@ let arr = [
     on: { amount: "$324.00" },
   },
 ];
-let inputValue;
+let inputValue = 3;
 slider.addEventListener("input", (event) => {
   inputValue = Number(event.target.value);
   moneyPermonth.textContent = arr[inputValue].off.amount;
@@ -60,14 +60,23 @@ checkBox.addEventListener("change", () => {
   if (checked) {
     moneyPermonth.textContent = arr[inputValue].on.amount;
     monthSpan.textContent = "/ year";
+  } else {
+    moneyPermonth.textContent = arr[inputValue].off.amount;
+    monthSpan.textContent = "/ month";
   }
 });
 
-// slider.addEventListener("input", function () {
-//   const value = slider.value;
-//   const leftPosition = `calc(${value}% - 1rem)`;
-//   sliderButton.style.left = leftPosition;
-// });
+slider.oninput = function () {
+  var value = (this.value - this.min) / (this.max - this.min);
+  var percent = value * 100;
+
+  this.style.background =
+    "linear-gradient(to right, #4CAF50 0%, #4CAF50 " +
+    percent +
+    "%, #d3d3d3 " +
+    percent +
+    "%, #d3d3d3 100%)";
+};
 
 // slider.oninput = function () {
 //   var value = (this.value - this.min) / (this.max - this.min);
@@ -80,4 +89,21 @@ checkBox.addEventListener("change", () => {
 //     percent +
 //     "%, #d3d3d3 100%)";
 
-// დავძებნო ფსევდო ელემენტი thumb input value ti vwevdebit slaiders
+//   var sliderLine = document.querySelector(".slider-line");
+//   sliderLine.style.width = percent + "%";
+// };
+
+// let sliderLine = document.querySelector(".xazi");
+// slider.oninput = function () {
+//   let value = (this.value - this.min) / (this.max - this.min);
+//   let percent = value * 100;
+
+//   this.style.background =
+//     "linear-gradient(to right, #4CAF50 0%, #4CAF50 " +
+//     percent +
+//     "%, #d3d3d3 " +
+//     percent +
+//     "%, #d3d3d3 100%)";
+
+//   sliderLine.style.width = percent + "%";
+// };
