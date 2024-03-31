@@ -93,17 +93,17 @@ slider.oninput = function () {
 //   sliderLine.style.width = percent + "%";
 // };
 
-// let sliderLine = document.querySelector(".xazi");
-// slider.oninput = function () {
-//   let value = (this.value - this.min) / (this.max - this.min);
-//   let percent = value * 100;
+let sliderLine = document.querySelector(".xazi");
+slider.oninput = function () {
+  value = (this.value - this.min) / (this.max - this.min);
+  let percent = value * 100;
 
-//   this.style.background =
-//     "linear-gradient(to right, #4CAF50 0%, #4CAF50 " +
-//     percent +
-//     "%, #d3d3d3 " +
-//     percent +
-//     "%, #d3d3d3 100%)";
+  this.style.background =
+    "linear-gradient(to right, #4CAF50 0%, #4CAF50 " +
+    percent +
+    "%, #d3d3d3 " +
+    percent +
+    "%, #d3d3d3 100%)";
 
-//   sliderLine.style.width = percent + "%";
-// };
+  sliderLine.style.width = percent + "%";
+};
