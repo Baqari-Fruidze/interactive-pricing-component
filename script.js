@@ -66,17 +66,17 @@ checkBox.addEventListener("change", () => {
   }
 });
 
-slider.oninput = function () {
-  var value = (this.value - this.min) / (this.max - this.min);
-  var percent = value * 100;
+// slider.oninput = function () {
+//   var value = (this.value - this.min) / (this.max - this.min);
+//   var percent = value * 100;
 
-  this.style.background =
-    "linear-gradient(to right, #4CAF50 0%, #4CAF50 " +
-    percent +
-    "%, #d3d3d3 " +
-    percent +
-    "%, #d3d3d3 100%)";
-};
+//   this.style.background =
+//     "linear-gradient(to right, #4CAF50 0%, #4CAF50 " +
+//     percent +
+//     "%, #d3d3d3 " +
+//     percent +
+//     "%, #d3d3d3 100%)";
+// };
 
 // slider.oninput = function () {
 //   var value = (this.value - this.min) / (this.max - this.min);
@@ -98,12 +98,11 @@ slider.oninput = function () {
   value = (this.value - this.min) / (this.max - this.min);
   let percent = value * 100;
 
-  this.style.background =
-    "linear-gradient(to right, #4CAF50 0%, #4CAF50 " +
-    percent +
-    "%, #d3d3d3 " +
-    percent +
-    "%, #d3d3d3 100%)";
-
-  sliderLine.style.width = percent + "%";
+  this.style.background = `linear-gradient(
+    to right,
+    #a4f3eb 0%,
+    #a4f3eb ${percent}%,
+    #d3d3d3 ${percent}%,
+    #d3d3d3 100%
+  )`;
 };

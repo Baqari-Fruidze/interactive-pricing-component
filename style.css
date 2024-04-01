@@ -88,27 +88,24 @@ h1 {
 .slideris-mshobeli {
   position: relative;
   width: 100%;
-  z-index: 0;
 }
-.xazi {
-  bottom: 0.2rem;
-  border-radius: 5px;
-  width: 100%;
-  position: absolute;
-  background: #a4f3eb !important;
-  height: 1.3rem;
-  z-index: -1;
-}
+
 .slider {
   width: 100%;
   -webkit-appearance: none;
   height: 13px;
   border-radius: 5px;
-  background: #ecf0fb !important;
   outline: none;
   opacity: 0.7;
   -webkit-transition: 0.2s;
   transition: opacity 0.2s;
+  background: linear-gradient(
+    to right,
+    #a4f3eb 0%,
+    #a4f3eb 50%,
+    #d3d3d3 50%,
+    #d3d3d3 100%
+  );
 }
 /* .slider::-webkit-slider-runnable-track {
   width: 100%;
